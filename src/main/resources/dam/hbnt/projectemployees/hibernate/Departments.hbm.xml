@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 5 de febr. 2020, 13:17:51 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class catalog="employees" name="dam.hbnt.projectemployees.model.Departments" optimistic-lock="version" table="departments">
+    <id name="deptNo" type="string">
+      <column length="4" name="dept_no"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="deptName" type="string">
+      <column length="40" name="dept_name" not-null="true" unique="true"/>
+    </property>
+  </class>
+</hibernate-mapping>
