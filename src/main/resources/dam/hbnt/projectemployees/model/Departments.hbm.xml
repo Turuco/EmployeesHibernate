@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated 5 de febr. 2020, 13:17:51 by Hibernate Tools 4.3.1 -->
+<!-- Generated 6 de febr. 2020, 10:16:59 by Hibernate Tools 4.3.1 -->
 <hibernate-mapping>
-  <class catalog="employees" name="dam.hbnt.projectemployees.model.Departments" optimistic-lock="version" table="departments">
+  <class catalog="employees" name="dam.hbnt.projectemployees.programa.model.Departments" optimistic-lock="version" table="departments">
     <id name="deptNo" type="string">
       <column length="4" name="dept_no"/>
       <generator class="assigned"/>
@@ -10,5 +10,11 @@
     <property name="deptName" type="string">
       <column length="40" name="dept_name" not-null="true" unique="true"/>
     </property>
+    <set fetch="select" inverse="true" lazy="true" name="deptEmps" table="dept_emp">
+      <key>
+        <column length="4" name="dept_no" not-null="true"/>
+      </key>
+      <one-to-many class="dam.hbnt.projectemployees.programa.model.DeptEmp"/>
+    </set>
   </class>
 </hibernate-mapping>

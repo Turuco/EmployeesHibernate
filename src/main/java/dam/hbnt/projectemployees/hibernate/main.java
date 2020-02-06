@@ -5,6 +5,8 @@
  */
 package dam.hbnt.projectemployees.hibernate;
 
+import dam.hbnt.projectemployees.Program.Program;
+
 /**
  *
  * @author alumne
@@ -12,7 +14,9 @@ package dam.hbnt.projectemployees.hibernate;
 public class main {
     
     public static void main(String[] args) {
-        
+        Program program=new Program();
+        program.listDepartments();
+        //program.addDepartments("d0200","Pruebas Hibernate");
     }
     
 }

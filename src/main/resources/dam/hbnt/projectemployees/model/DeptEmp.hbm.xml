@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 6 de febr. 2020, 10:16:59 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class catalog="employees" name="dam.hbnt.projectemployees.programa.model.DeptEmp" optimistic-lock="version" table="dept_emp">
+    <composite-id class="dam.hbnt.projectemployees.programa.model.DeptEmpId" name="id">
+      <key-property name="empNo" type="int">
+        <column name="emp_no"/>
+      </key-property>
+      <key-property name="deptNo" type="string">
+        <column length="4" name="dept_no"/>
+      </key-property>
+    </composite-id>
+    <many-to-one class="dam.hbnt.projectemployees.programa.model.Departments" fetch="select" insert="false" name="departments" update="false">
+      <column length="4" name="dept_no" not-null="true"/>
+    </many-to-one>
+    <many-to-one class="dam.hbnt.projectemployees.programa.model.Employees" fetch="select" insert="false" name="employees" update="false">
+      <column name="emp_no" not-null="true"/>
+    </many-to-one>
+    <property name="fromDate" type="date">
+      <column length="10" name="from_date" not-null="true"/>
+    </property>
+    <property name="toDate" type="date">
+      <column length="10" name="to_date" not-null="true"/>
+    </property>
+  </class>
+</hibernate-mapping>

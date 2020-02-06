@@ -47,8 +47,9 @@ Contributor(s):
     <property name="hibernate.connection.username">empleado</property>
     <property name="hibernate.connection.password">empleado</property>
     <property name="hibernate.query.factory_class">org.hibernate.hql.internal.classic.ClassicQueryTranslatorFactory</property>
-    <property name="hibernate.show_sql">false</property>
-    <mapping resource="dam/hbnt/projectemployees/hibernate/Departments.hbm.xml"/>
-    <mapping resource="dam/hbnt/projectemployees/hibernate/Employees.hbm.xml"/>
+    <property name="hibernate.show_sql">true</property>
+    <mapping resource="dam/hbnt/projectemployees/model/DeptEmp.hbm.xml"/>
+    <mapping resource="dam/hbnt/projectemployees/model/Employees.hbm.xml"/>
+    <mapping resource="dam/hbnt/projectemployees/model/Departments.hbm.xml"/>
   </session-factory>
 </hibernate-configuration>
