@@ -92,6 +92,13 @@ public class Employees  implements java.io.Serializable {
         this.deptEmps = deptEmps;
     }
 
+    @Override
+    public String toString() {
+        String tostring="ID:"+  empNo+" First Name:"+ firstName+ " Last name: "+ lastName + "\n Date Birthday: "+ birthDate + " Gender: "+ gender
+                + "Hire Date: "+ hireDate + "\n----------------------------------------------------\n";
+        return tostring;
+    }
+
 
 
 

@@ -51,6 +51,11 @@ public class Departments  implements java.io.Serializable {
         this.deptEmps = deptEmps;
     }
 
+    @Override
+    public String toString() {
+        return "ID: "+ deptNo+ " Name: "+ deptName;
+    }
+
 
 
 
